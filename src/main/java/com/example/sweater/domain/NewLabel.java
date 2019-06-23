@@ -36,7 +36,7 @@ private Product product;
         Rectangle one = new Rectangle( 113.0F,159.0F);
         DateFormat df = new SimpleDateFormat( "HH-mm-ss" ) ;
         Document document = new Document(one);
-        PdfWriter.getInstance(document, new FileOutputStream("label " + product.getBarcode() +" "+  df.format( new Date( ))+".pdf"));
+        PdfWriter.getInstance(document, new FileOutputStream("D:\\label " + product.getBarcode() +" "+  df.format( new Date( ))+".pdf"));
         document.setMargins(2, 2, 2, 2);
 
         document.open();
