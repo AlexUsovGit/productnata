@@ -16,7 +16,7 @@ import java.util.Date;
 public class NewLabel  {
 private String str;
 private Product product;
-public static final String FONT = "c:\\Windows\\Fonts\\times.ttf";
+//public static final String FONT = "c:\\Windows\\Fonts\\times.ttf";
 
 
     public NewLabel() {
@@ -36,13 +36,14 @@ public static final String FONT = "c:\\Windows\\Fonts\\times.ttf";
         Rectangle one = new Rectangle( 113.0F,159.0F);
         DateFormat df = new SimpleDateFormat( "HH-mm-ss" ) ;
         Document document = new Document(one);
-        PdfWriter.getInstance(document, new FileOutputStream("D:\\label " + product.getBarcode() +" "+  df.format( new Date( ))+".pdf"));
+        PdfWriter.getInstance(document, new FileOutputStream("label " + product.getBarcode() +" "+  df.format( new Date( ))+".pdf"));
         document.setMargins(2, 2, 2, 2);
 
         document.open();
 
-        BaseFont bf = BaseFont.createFont(FONT, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-        Font font = new Font(bf, 5, Font.NORMAL);
+       // BaseFont bf = BaseFont.createFont(FONT, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+        //Font font = new Font(bf, 5, Font.NORMAL);
+        Font font = new Font(Font.FontFamily.HELVETICA, 5, Font.NORMAL);
        // Chunk chunk = new Chunk("Hello World" + product.getBarcode(), font);
         PdfPCell cell;
 
