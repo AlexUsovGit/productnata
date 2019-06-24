@@ -126,10 +126,18 @@
 
         </tbody>
     </table>
+
+    <div>
+        <form method="post" action="/getpdf">
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+            <input type="text" name="filter" value="{{barcode}}">
+            <button type="submit">Открыть</button>
+        </form>
             {{/products}}
 </div>
-<div>
-    <a  href="D:\iTextHelloWorld.pdf" >Открыть</a>
+
+
+
 </div>
 
 </body>
